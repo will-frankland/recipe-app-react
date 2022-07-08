@@ -1,13 +1,14 @@
 import { FaPizzaSlice, FaHamburger } from 'react-icons/fa';
-import { GiNoodles, GiChopSticks, GiIndianPalace, GiFrenchFries } from "react-icons/gi";
+import { GiNoodles, GiChopsticks, GiIndianPalace, GiFrenchFries } from "react-icons/gi";
 import { MdEmojiFoodBeverage } from "react-icons/md";
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
+import { List } from './Styles';
 
 
 export default function Category() {
   return (
-    <div>
+    <List>
       <div>
         <FaPizzaSlice/>
         <h4>Italian</h4>
@@ -21,7 +22,7 @@ export default function Category() {
         <h4>Chinese</h4>
       </div>
       <div>
-        <GiChopSticks/>
+        <GiChopsticks/>
         <h4>Japanese</h4>
       </div>
       <div>
@@ -36,6 +37,6 @@ export default function Category() {
         <MdEmojiFoodBeverage/>
         <h4>Drinks</h4>
       </div>
-    </div>
+    </List>
   )
 }
