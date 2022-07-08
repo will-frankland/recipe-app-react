@@ -1,11 +1,8 @@
-import React from 'react'
 
-function Veggie() {
+export default function Veggie() {
   return (
     <div>
       Veggie
     </div>
   )
 }
-
-export default Veggie
