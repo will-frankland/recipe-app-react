@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState } from "react";
+import styled from "styled-components";
 
 export default function Popular() {
   const [popular, setPopular] = useState([]);
@@ -18,13 +19,28 @@ const getPopular = async () => {
     <div>
       {popular.map((recipe) => {
         return(
-          <div>
-            <p>
-              {recipe.title}
-            </p>
-          </div>
+          <Wrapper>
+            <h3>Popular Recipes</h3>
+            {popular.map((recipe) => {
+        return(
+          <Card>
+            <p>{recipe.title}</p>
+            <img src={recipe.image} alt="recipe.title" />
+          </Card>
+        );
+            })};
+          </Wrapper>
         );
       })}
     </div>
   );
 }
+
+const Wrapper = styled.div`
+  margin: 4rem 0rem;
+`;
+
+const Card = styled.div`
+  min-height: 25rem;
+  border-radius: 2rem;
+`;
