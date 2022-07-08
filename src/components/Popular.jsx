@@ -11,10 +11,24 @@ export default function Popular() {
   }, [])
 
   const getPopular = async () => {
-    const api = await fetch(`https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=9`)
-    const data = await api.json()
-    console.log(data)
-    setPopular(data.recipes)
+
+    // checks local storage (cache) so that API is not refreshed every time (local storage only saves strings)
+    const checkStorage = localStorage.getItem('popular');
+
+    if (checkStorage) {
+      setPopular(JSON.parse(checkStorage))
+    } else {
+      const api = await fetch(
+        `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=9`
+      );
+      const data = await api.json();
+
+        localStorage.setItem('popular', JSON.stringify(data.recipes))
+
+      console.log(data.recipes)
+      setPopular(data.recipes)
+    }
+
   }
 
   return (
