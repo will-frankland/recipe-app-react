@@ -9,34 +9,34 @@ import { List } from './Styles';
 export default function Category() {
   return (
     <List>
-      <div>
+      <NavLink to={'/cuisine/Italian'}>
         <FaPizzaSlice/>
         <h4>Italian</h4>
-      </div>
-      <div>
+      </NavLink>
+      <NavLink to={'/cuisine/Burgers'}>
         <FaHamburger/>
         <h4>Burgers</h4>
-      </div>
-      <div>
+      </NavLink>
+      <NavLink to={'/cuisine/Chinese'}>
         <GiNoodles/>
         <h4>Chinese</h4>
-      </div>
-      <div>
+      </NavLink>
+      <NavLink to={'/cuisine/Japanese'}>
         <GiChopsticks/>
         <h4>Japanese</h4>
-      </div>
-      <div>
+      </NavLink>
+      <NavLink to={'/cuisine/Indian'}>
         <GiIndianPalace/>
         <h4>Indian</h4>
-      </div>
-      <div>
+      </NavLink>
+      <NavLink to={'/cuisine/FastFood'}>
         <GiFrenchFries/>
         <h4>Fast Food</h4>
-      </div>
-      <div>
+      </NavLink>
+      <NavLink to={'/cuisine/Drinks'}>
         <MdEmojiFoodBeverage/>
         <h4>Drinks</h4>
-      </div>
+      </NavLink>
     </List>
   )
 }
