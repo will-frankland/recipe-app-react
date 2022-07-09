@@ -4,10 +4,11 @@ import { FormStyle } from './Styles';
 
 export default function Search() {
   return (
-    <div>
-      <form>
+    <FormStyle>
+      <div>
+        <FaSearch></FaSearch>
         <input type="text" />
-      </form>
-    </div>
+      </div>
+    </FormStyle>
   )
 }

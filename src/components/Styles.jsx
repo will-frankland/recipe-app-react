@@ -91,10 +91,15 @@ export const SLink = styled(NavLink)`
 
 export const FormStyle = styled.div`
   margin: 0rem 20rem;
-  position: relative;
-  width: 100%
+
+  div {
+    position: relative;
+    width: 100%
+  }
+  
   input {
     border: none;
+    width: 100%;
     background: linear-gradient(35deg, #494949, #313131);
     font-size: 1.5rem;
     color: white;
@@ -103,6 +108,7 @@ export const FormStyle = styled.div`
     border-radius: 1rem;
     outline: none;
   }
+
   svg {
     position: absolute;
     top: 50%;
