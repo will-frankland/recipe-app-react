@@ -1,13 +1,16 @@
 import { useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import { FormStyle } from './Styles';
+import { useNavigate } from "react-router-dom";
 
 export default function Search() {
 
   const [input, setInput] = useState("");
+  const navigate = useNavigate();
 
   const submitHandler = (e) => {
     e.preventDefault();
+    navigate('/searched/' + input)
   };
 
   return (
