@@ -13,9 +13,9 @@ export default function Category() {
         <FaPizzaSlice/>
         <h4>Italian</h4>
       </SLink>
-      <SLink to={'/cuisine/Burgers'}>
+      <SLink to={'/cuisine/American'}>
         <FaHamburger/>
-        <h4>Burgers</h4>
+        <h4>American</h4>
       </SLink>
       <SLink to={'/cuisine/Chinese'}>
         <GiNoodles/>
